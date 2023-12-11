@@ -1,0 +1,40 @@
+{
+	"name": "@igor.dvlpr/$1",
+	"version": "1.0.0",
+	"description": "$2",
+	"sideEffects": false,
+	"engines": {
+		"node": ">=18.0"
+	},
+	"types": "./dist/index.d.ts",
+	"main": "./src/index.js",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"test": "vitest --run",
+		"pub": "npm test && tsc && npm publish --access public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/igorskyflyer/$3.git"
+	},
+	"keywords": [
+		$4,
+		"igorskyflyer",
+		"igor.dvlpr"
+	],
+	"author": "Igor Dimitrijević <@igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
+	"license": "MIT",
+	"funding": "https://ko-fi.com/igorskyflyer",
+	"bugs": {
+		"url": "https://github.com/igorskyflyer/$3/issues"
+	},
+	"homepage": "https://github.com/igorskyflyer/$3#readme",
+	"devDependencies": {
+		"@types/node": "^18.0.0",
+		"typescript": "^5.1.6",
+		"vitest": "^0.32.4"
+	}
+}
