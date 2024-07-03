@@ -50,25 +50,25 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/windows-packages](https://www.npmjs.com/package/@igor.dvlpr/windows-packages)
 
-> __
+> _💻 A Node.js module for reading the Packages registry key on Windows 10. Useful for retrieving Windows 10 installed Store applications. 📦_
 
-[]()
+[@igor.dvlpr/astro-post-excerpt](https://www.npmjs.com/package/@igor.dvlpr/astro-post-excerpt)
 
-> __
+> _⭐ An Astro component that renders post excerpts for your Astro blog - directly from your Markdown files. Astro v2 collections are supported as well! 💎_
 
-[]()
+[@igor.dvlpr/node-clone-js](https://www.npmjs.com/package/@igor.dvlpr/node-clone-js)
 
-> __
+> _🧬 A lightweight JavaScript utility allowing deep copy-by-value of nested objects, arrays and arrays of objects. 🪁_
 
-[]()
+[@igor.dvlpr/odin](https://www.npmjs.com/package/@igor.dvlpr/odin)
 
-> __
+> _🔱 Odin is an Object wrapper that allows you to create objects and set their attributes - all at once! 🔺_
 
-[]()
+[@igor.dvlpr/str-is-in](https://www.npmjs.com/package/@igor.dvlpr/str-is-in)
 
-> __
+> _🧵 Provides ways of checking whether a String is present in an Array of Strings using custom Comparators. 🔍_
 
 <br>
 <br>
