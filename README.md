@@ -2,7 +2,7 @@
 
 <br>
 
-🛴 A perfomant JavaScript polyfill for the scrollend Event. ⛸️
+🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️
 
 <br>
 <br>
