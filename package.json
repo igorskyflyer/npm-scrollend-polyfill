@@ -1,40 +1,43 @@
 {
-	"name": "@igor.dvlpr/$1",
+	"name": "@igor.dvlpr/$pkg",
 	"version": "1.0.0",
-	"description": "$2",
+	"description": "$desc",
 	"sideEffects": false,
 	"engines": {
-		"node": ">=18.0"
+		"node": ">=20.0"
 	},
-	"types": "./dist/index.d.ts",
-	"main": "./src/index.js",
+	"types": "./dist/index.d.mts",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
 	"files": [
-		"src",
 		"dist"
 	],
 	"scripts": {
+		"build": "tsc",
 		"test": "vitest --run",
-		"pub": "npm test && tsc && npm publish --access public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/$3.git"
+		"debug": "vitest",
+		"pub": "npm test && npm run build && npm publish --access public"
 	},
 	"keywords": [
-		$4,
+		$tags,
 		"igorskyflyer",
 		"igor.dvlpr"
 	],
-	"author": "Igor Dimitrijević <@igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
 	"license": "MIT",
+	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
 	"funding": "https://ko-fi.com/igorskyflyer",
-	"bugs": {
-		"url": "https://github.com/igorskyflyer/$3/issues"
+	"homepage": "https://github.com/igorskyflyer/$repo",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/igorskyflyer/$repo.git"
 	},
-	"homepage": "https://github.com/igorskyflyer/$3#readme",
+	"bugs": {
+		"url": "https://github.com/igorskyflyer/$repo/issues"
+	},
 	"devDependencies": {
-		"@types/node": "^18.0.0",
-		"typescript": "^5.1.6",
-		"vitest": "^0.32.4"
+		"@biomejs/biome": "^1.8.3",
+		"@types/node": "^20.14.9",
+		"typescript": "^5.5.2",
+		"vitest": "^1.6.0"
 	}
 }
