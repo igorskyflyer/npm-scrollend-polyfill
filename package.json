@@ -1,7 +1,7 @@
 {
-	"name": "@igor.dvlpr/$pkg",
+	"name": "@igor.dvlpr/scrollend-polyfill",
 	"version": "1.0.0",
-	"description": "$desc",
+	"description": "🛴 A perfomant JavaScript polyfill for the scrollend Event. ⛸️",
 	"sideEffects": false,
 	"engines": {
 		"node": ">=20.0"
@@ -17,20 +17,28 @@
 		"pub": "npm run build && npm publish --access public"
 	},
 	"keywords": [
-		$tags,
+		"scrollend",
+		"scroll-end",
+		"browser",
+		"scroll",
+		"event",
+		"polyfill",
+		"dom",
+		"document",
+		"interactivity",
 		"igorskyflyer",
 		"igor.dvlpr"
 	],
 	"license": "MIT",
 	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
 	"funding": "https://ko-fi.com/igorskyflyer",
-	"homepage": "https://github.com/igorskyflyer/$repo",
+	"homepage": "https://github.com/igorskyflyer/npm-scrollend-polyfill",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/$repo.git"
+		"url": "git+https://github.com/igorskyflyer/npm-scrollend-polyfill.git"
 	},
 	"bugs": {
-		"url": "https://github.com/igorskyflyer/$repo/issues"
+		"url": "https://github.com/igorskyflyer/npm-scrollend-polyfill/issues"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
