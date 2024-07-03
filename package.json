@@ -1,7 +1,7 @@
 {
 	"name": "@igor.dvlpr/scrollend-polyfill",
 	"version": "1.0.0",
-	"description": "🛴 A perfomant JavaScript polyfill for the scrollend Event. ⛸️",
+	"description": "🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️",
 	"sideEffects": false,
 	"engines": {
 		"node": ">=20.0"
