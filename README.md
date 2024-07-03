@@ -1,8 +1,8 @@
-# $project
+# ScrollEnd polyfill
 
 <br>
 
-$desc
+🛴 A perfomant JavaScript polyfill for the scrollend Event. ⛸️
 
 <br>
 <br>
@@ -33,7 +33,7 @@ $desc
 Install it by executing:
 
 ```shell
-npm i "@igor.dvlpr/$pkg"
+npm i "@igor.dvlpr/scrollend-polyfill"
 ```
 
 <br>
@@ -44,7 +44,7 @@ npm i "@igor.dvlpr/$pkg"
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/$repo/blob/main/LICENSE).
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/LICENSE).
 
 ---
 
