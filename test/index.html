@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Scrollend polyfill</title>
+		<script>
+			EventTarget.prototype.addEventListener=function (eventType, listener, options) {
+				if (eventType==='scrollend') {
+					console.log('scroll endddd')
+				}
+			}
+		</script>
+		<script src="../dist/index.mjs" type="module"></script>
+		<style>
+			html,
+			body {
+				padding: 10%;
+				overflow-y: visible;
+			}
+
+			div {
+				width: 250px;
+				height: 1000px;
+				background: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div></div>
+
+		<script>
+			document.body.addEventListener('scrollend', () => { })
+		</script>
+	</body>
+
+</html>
