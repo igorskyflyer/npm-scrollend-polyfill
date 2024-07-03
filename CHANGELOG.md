@@ -1,12 +1,12 @@
 ## 📒 Changelog
 
-### of [@igor.dvlpr/$1](https://github.com/igorskyflyer/$3)
+### of [@igor.dvlpr/$pkg](https://github.com/igorskyflyer/$repo)
 
 <br>
 
 ## v
 
-<p align="right"><em>--2023</em></p>
+<p align="right"><em>--2024</em></p>
 
 - 
 
@@ -15,6 +15,6 @@
 
 ## v1.0.0
 
-<p align="right"><em>--2023</em></p>
+<p align="right"><em>--2024</em></p>
 
 - **🚀 launch**: initial release 🎉
