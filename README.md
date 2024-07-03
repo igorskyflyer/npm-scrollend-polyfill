@@ -1,6 +1,8 @@
-# $1
-$2
+# $project
 
+<br>
+
+$desc
 
 <br>
 <br>
@@ -19,11 +21,11 @@ $2
 		<br>
 		<br>
 		<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
+		<br>
+		<br>
 	</blockquote>
 </div>
 
-<br>
-<br>
 <br>
 
 ## 🕵🏼 Usage
@@ -31,7 +33,7 @@ $2
 Install it by executing:
 
 ```shell
-npm i "@igor.dvlpr/$1"
+npm i "@igor.dvlpr/$pkg"
 ```
 
 <br>
@@ -42,7 +44,7 @@ npm i "@igor.dvlpr/$1"
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/$3/blob/main/LICENSE).
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/$repo/blob/main/LICENSE).
 
 ---
 
@@ -67,3 +69,10 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 []()
 
 > __
+
+<br>
+<br>
+
+>
+> Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
+>
