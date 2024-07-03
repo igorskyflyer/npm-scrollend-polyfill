@@ -1,1 +1,0 @@
-// Author: Igor Dimitrijević (@igorskyflyer)
