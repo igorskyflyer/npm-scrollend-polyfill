@@ -23,6 +23,9 @@
 			"style": {
 				"noInferrableTypes": "off"
 			},
+			"complexity": {
+				"useArrowFunction": "off"
+			},
 			"suspicious": {
 				"noExplicitAny": "off"
 			}
