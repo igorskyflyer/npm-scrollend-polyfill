@@ -24,7 +24,8 @@
 				"noInferrableTypes": "off"
 			},
 			"complexity": {
-				"useArrowFunction": "off"
+				"useArrowFunction": "off",
+				"noUselessThisAlias": "off"
 			},
 			"suspicious": {
 				"noExplicitAny": "off"
