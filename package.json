@@ -1,53 +1,52 @@
 {
-	"name": "@igor.dvlpr/scrollend-polyfill",
-	"version": "1.0.0",
-	"description": "🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️",
-	"sideEffects": false,
-	"engines": {
-		"node": ">=20.0"
-	},
-	"types": "./dist/index.d.mts",
-	"main": "./dist/index.mjs",
-	"module": "./dist/index.mjs",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"start": "node server.mjs",
-		"test": "npm run build && npm start",
-		"build": "tsc",
-		"pub": "npm run build && npm publish --access public"
-	},
-	"keywords": [
-		"scrollend",
-		"scroll-end",
-		"browser",
-		"scroll",
-		"event",
-		"polyfill",
-		"dom",
-		"document",
-		"interactivity",
-		"igorskyflyer",
-		"igor.dvlpr"
-	],
-	"license": "MIT",
-	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
-	"funding": "https://ko-fi.com/igorskyflyer",
-	"homepage": "https://github.com/igorskyflyer/npm-scrollend-polyfill",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/npm-scrollend-polyfill.git"
-	},
-	"bugs": {
-		"url": "https://github.com/igorskyflyer/npm-scrollend-polyfill/issues"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.8.3",
-		"@types/node": "^20.14.9",
-		"typescript": "^5.5.3"
-	},
-	"dependencies": {
-		"@igor.dvlpr/hook": "^1.0.0"
-	}
+  "name": "@igor.dvlpr/scrollend-polyfill",
+  "version": "1.0.0",
+  "description": "🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0"
+  },
+  "types": "./dist/index.d.mts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "files": ["dist"],
+  "scripts": {
+    "build": "esbuild src/index.mts --bundle --outdir=dist",
+    "start": "npm run build && node test/server.mjs",
+    "test": "npm run build && npm start",
+    "pub": "npm run build && npm publish --access public"
+  },
+  "keywords": [
+    "scrollend",
+    "scroll-end",
+    "browser",
+    "scroll",
+    "event",
+    "polyfill",
+    "dom",
+    "document",
+    "interactivity",
+    "igorskyflyer",
+    "igor.dvlpr"
+  ],
+  "license": "MIT",
+  "author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
+  "funding": "https://ko-fi.com/igorskyflyer",
+  "homepage": "https://github.com/igorskyflyer/npm-scrollend-polyfill",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorskyflyer/npm-scrollend-polyfill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igorskyflyer/npm-scrollend-polyfill/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.14.9",
+    "esbuild": "0.23.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@igor.dvlpr/hook": "^1.0.0"
+  }
 }
