@@ -12,7 +12,7 @@ const server = createServer((req, res) => {
 	} else if (req.url?.endsWith('.mjs')) {
 		res.statusCode = 200
 		res.setHeader('Content-Type', 'application/javascript')
-		res.end(readFileSync('./dist/index.mjs', 'utf-8'))
+		res.end(readFileSync(`.${req.url}`, 'utf-8'))
 	} else {
 		res.statusCode = 404
 		res.end()
