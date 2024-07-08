@@ -30,6 +30,9 @@
       "style": {
         "noInferrableTypes": "off"
       },
+      "complexity": {
+        "noUselessThisAlias": "off"
+      },
       "suspicious": {
         "noExplicitAny": "off"
       }
