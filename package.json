@@ -6,7 +6,7 @@
   "browser": "./dist/scrollend.js",
   "files": ["dist"],
   "scripts": {
-    "build": "esbuild src/index.mts --bundle --outfile=./dist/scrollend.js",
+    "build": "esbuild src/index.mts --target=es6 --bundle --outfile=./dist/scrollend.js",
     "start": "npm run build && node ./test/server.mjs",
     "test": "npm run build && npm start",
     "pub": "npm run build && npm publish --access public"
