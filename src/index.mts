@@ -10,6 +10,10 @@ const supported: boolean = 'onscrollend' in window
 
 if (!supported) {
   const scrollEndEvent: Event = new Event('scrollend')
+  const registered: WeakMap<EventTarget, boolean> = new WeakMap<
+    EventTarget,
+    boolean
+  >()
 
   function addScrollEndHandler(
     this: EventTarget,
@@ -21,19 +25,26 @@ if (!supported) {
     }
 
     const target: EventTarget = this
+
+    if (registered.has(target)) {
+      return
+    }
+
     let timeout: NodeJS.Timeout | number
 
-    this.addEventListener(
+    target.addEventListener(
       'scroll',
       () => {
         clearTimeout(timeout)
         timeout = setTimeout(() => {
-          handler()
           target.dispatchEvent(scrollEndEvent)
         }, 100)
       },
       false
     )
+
+    registered.set(target, true)
+    target.addEventListener('scrollend', handler, false)
   }
 
   hook(window, 'addEventListener', addScrollEndHandler)
