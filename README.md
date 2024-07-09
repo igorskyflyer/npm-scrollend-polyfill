@@ -34,7 +34,7 @@
 
 ## 🕵🏼 Usage
 
-You can import the file via a CDN or by installing the package.
+You can import the file via the CDN or by installing the package.
 
 <br>
 
