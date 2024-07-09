@@ -1,12 +1,12 @@
 {
   "name": "@igor.dvlpr/scrollend-polyfill",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️",
   "sideEffects": true,
   "browser": "./dist/scrollend.js",
   "files": ["dist"],
   "scripts": {
-    "build": "esbuild src/index.mts --target=es6 --bundle --outfile=./dist/scrollend.js",
+    "build": "esbuild src/index.mts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js",
     "start": "npm run build && node ./test/server.mjs",
     "test": "npm run build && npm start",
     "pub": "npm run build && npm publish --access public"
