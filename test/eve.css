@@ -1,5 +1,5 @@
 body {
-	height: 150vh;
+	height: 180vh;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -11,9 +11,37 @@ main {
 	justify-content: center;
 }
 
-h1,
-h3 {
-	margin: auto;
-	padding: 10px 0;
+div {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+h1 {
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+}
+
+h1.scrolling {
+	background: #008cff;
+}
+
+h1.waiting {
+	background: #ffff00;
+}
+
+h1.end {
+	background: #43ee76;
+}
+
+button {
+	padding: .5rem 1rem;
+	border-radius: 4px;
+	background: #261198;
+	color: #FFF;
+	font-weight: bold;
+	cursor: pointer;
 }
