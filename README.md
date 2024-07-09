@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-	🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️
+	🛴 A performant and light (&lt; 1KB) JavaScript polyfill for the scrollend Event. ⛸️
 </p>
 
 <br>
