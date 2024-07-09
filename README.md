@@ -54,6 +54,8 @@ then add it to your HTML file:
 <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js"></script>
 ```
 
+<br>
+
 #### Package install
 
 Install it by executing:
