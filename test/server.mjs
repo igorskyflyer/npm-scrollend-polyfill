@@ -12,7 +12,7 @@ const routes = {
 const server = createServer((req, res) => {
   let root = './test'
 
-  if (!req || !req.url) {
+  if (!req || !req.url || req.url.endsWith('ico')) {
     res.statusCode = 404
     res.end()
   } else if (req.url === '/') {
