@@ -42,7 +42,7 @@ You can import the file via the CDN or by installing the package.
 
 The polyfill is hosted on jsDelivr and you can grab it from here:
 
-[https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js](https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js)
+[https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js](https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js)
 
 
 then add it to your HTML file:
@@ -51,7 +51,7 @@ then add it to your HTML file:
 
 `index.html`
 ```html
-<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"></script>
 ```
 
 <br>
@@ -70,14 +70,16 @@ Then import it into your project, e.g. an HTML page via the `<script>` tag:
 
 `index.html`
 ```html
-<script src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.js"></script>
+<script src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"></script>
 ```
 
-but if you don't like messing with that long path just copy the `"./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.js"` file to a directory of your liking and then update the reference to it, i.e.
+but if you don't like messing with that long path just copy the `"./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"` file to a directory of your liking and then update the reference to it, i.e.
 
 ```html
-<script src="./js/scrollend.js"></script>
+<script src="./js/scrollend.min.js"></script>
 ```
+
+<br>
 
 ## 🤹🏼 API
 
@@ -98,7 +100,7 @@ The polyfilled `scrollend` Event can be added via `addEventListener()` or via th
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Scrollend polyfill</title>
-		<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"></script>
 		<style>
 			body {
 				height: 180vh;
