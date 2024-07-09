@@ -2,13 +2,16 @@
 
 <br>
 
-🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️
+<p align="center">
+	🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️
+</p>
 
 <br>
 <br>
 
 <div align="center">
 	<blockquote>
+		<br>
 		<h4>💖 Support further development</h4>
 		<span>I work hard for every project, including this one and your support means a lot to me!
 		<br>
@@ -21,6 +24,7 @@
 		<br>
 		<br>
 		<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
+		<br>
 		<br>
 		<br>
 	</blockquote>
