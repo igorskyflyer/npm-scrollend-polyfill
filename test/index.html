@@ -5,34 +5,23 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Scrollend polyfill</title>
-		<script>
-			EventTarget.prototype.addEventListener=function (eventType, listener, options) {
-				if (eventType==='scrollend') {
-					console.log('scroll endddd')
-				}
-			}
-		</script>
-		<script src="../dist/index.mjs" type="module"></script>
-		<style>
-			html,
-			body {
-				padding: 10%;
-				overflow-y: visible;
-			}
-
-			div {
-				width: 250px;
-				height: 1000px;
-				background: red;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="eve.css">
+		<script src="../dist/index.js"></script>
 	</head>
 
 	<body>
-		<div></div>
-
+		<main>
+			<div>
+				<h1>Launch the DevTools and open the Console tab.</h1>
+				<h3>Then start scrolling.</h3>
+			</div>
+		</main>
 		<script>
-			document.body.addEventListener('scrollend', () => { })
+			function test() { console.log('Scroll ended') }
+
+			document.addEventListener("DOMContentLoaded", () => {
+				document.addEventListener('scrollend', test)
+			})
 		</script>
 	</body>
 
