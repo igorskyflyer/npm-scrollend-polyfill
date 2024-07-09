@@ -12,14 +12,42 @@
 	<body>
 		<main>
 			<div>
-				<h1>Launch the DevTools and open the Console tab.</h1>
-				<h3>Then start scrolling.</h3>
+				<h1 class="waiting">Waiting for scroll...</h1>
+				<br>
+				<button onclick="reset()">Reset</button>
 			</div>
 		</main>
 		<script>
-			function test() { console.log('Scroll ended') }
+			const message=document.querySelector('h1')
 
-			document.addEventListener('scrollend', test)
+			function reset() {
+				message.textContent='Waiting for scroll...'
+				message.className='waiting'
+			}
+
+			// reset the scroll position
+			// each load
+			window.onunload=function () {
+				window.scrollTo(0, 0)
+			}
+
+			// prevents scroll events
+			// being fired upon reload
+			window.addEventListener('load', () => {
+				document.addEventListener('scroll', () => {
+					message.textContent='Scrolling...'
+					message.className='scrolling'
+				})
+
+				function handleScroll() {
+					message.textContent='Scrolling ended!'
+					message.className='end'
+				}
+
+				document.addEventListener('scrollend', handleScroll)
+
+				reset()
+			})
 		</script>
 	</body>
 
