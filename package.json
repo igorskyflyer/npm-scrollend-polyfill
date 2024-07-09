@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️",
   "sideEffects": true,
-  "browser": "./dist/index.js",
+  "browser": "./dist/scrollend.js",
   "files": ["dist"],
   "scripts": {
-    "build": "esbuild src/index.mts --bundle --outdir=dist",
+    "build": "esbuild src/index.mts --bundle --outfile=./dist/scrollend.js",
     "start": "npm run build && node test/server.mjs",
     "test": "npm run build && npm start",
     "pub": "npm run build && npm publish --access public"
