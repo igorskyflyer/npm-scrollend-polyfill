@@ -34,29 +34,91 @@
 
 ## 🕵🏼 Usage
 
+You can import the file via a CDN or by installing the package.
+
+<br>
+
+#### CDN
+
+The polyfill is hosted on jsDelivr and you can grab it from here:
+
+[https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js](https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js)
+
+
+then add it to your HTML file:
+
+<br>
+
+`index.html`
+```html
+<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js"></script>
+```
+
+#### Package install
+
 Install it by executing:
 
 ```shell
 npm i "@igor.dvlpr/scrollend-polyfill"
 ```
 
-<br>
-
 Then import it into your project, e.g. an HTML page via the `<script>` tag:
 
+<br>
+
+`index.html`
 ```html
 <script src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.js"></script>
 ```
 
-but if you don't like messing with that long path just copy the `scrollend.js` to a directory of your liking and then update the reference to it, i.e.
+but if you don't like messing with that long path just copy the `./dist/scrollend.js` file to a directory of your liking and then update the reference to it, i.e.
 
 ```html
 <script src="./js/scrollend.js"></script>
 ```
 
+## 🤹🏼 API
+
+This polyfill adds the `scrollend` Event for the `window` and `document` objects.
+
 <br>
 
-## 🤹🏼 API
+The polyfilled `scrollend` Event can be added via `addEventListener()` or via the property `onscrollend`, e.g.
+
+<br>
+
+`scroll-end.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Scrollend polyfill</title>
+		<link rel="stylesheet" type="text/css" href="eve.css">
+		<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<div>
+				<h1>Launch the DevTools and open the Console tab.</h1>
+				<h3>Then start scrolling.</h3>
+			</div>
+		</main>
+		<script>
+			function test() {
+				console.log('Scroll ended')
+			}
+
+			document.addEventListener('scrollend', test)
+		</script>
+	</body>
+
+</html>
+
+```
 
 ---
 
