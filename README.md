@@ -42,6 +42,20 @@ npm i "@igor.dvlpr/scrollend-polyfill"
 
 <br>
 
+Then import it into your project, e.g. an HTML page via the `<script>` tag:
+
+```html
+<script src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.js"></script>
+```
+
+but if you don't like messing with that long path just copy the `scrollend.js` to a directory of your liking and then update the reference to it, i.e.
+
+```html
+<script src="./js/scrollend.js"></script>
+```
+
+<br>
+
 ## 🤹🏼 API
 
 ---
