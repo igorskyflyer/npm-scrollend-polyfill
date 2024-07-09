@@ -98,8 +98,12 @@ The polyfilled `scrollend` Event can be added via `addEventListener()` or via th
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Scrollend polyfill</title>
-		<link rel="stylesheet" type="text/css" href="eve.css">
 		<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.js"></script>
+		<style>
+			body {
+				height: 180vh;
+			}
+		</style>
 	</head>
 
 	<body>
