@@ -2,13 +2,8 @@
   "name": "@igor.dvlpr/scrollend-polyfill",
   "version": "1.0.0",
   "description": "🛴 A performant JavaScript polyfill for the scrollend Event. ⛸️",
-  "sideEffects": false,
-  "engines": {
-    "node": ">=20.0"
-  },
-  "types": "./dist/index.d.mts",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "sideEffects": true,
+  "browser": "./dist/index.js",
   "files": ["dist"],
   "scripts": {
     "build": "esbuild src/index.mts --bundle --outdir=dist",
