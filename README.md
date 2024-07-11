@@ -155,17 +155,25 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 > _💻 A Node.js module for reading the Packages registry key on Windows 10. Useful for retrieving Windows 10 installed Store applications. 📦_
 
+<br>
+
 [@igor.dvlpr/astro-post-excerpt](https://www.npmjs.com/package/@igor.dvlpr/astro-post-excerpt)
 
 > _⭐ An Astro component that renders post excerpts for your Astro blog - directly from your Markdown files. Astro v2 collections are supported as well! 💎_
+
+<br>
 
 [@igor.dvlpr/node-clone-js](https://www.npmjs.com/package/@igor.dvlpr/node-clone-js)
 
 > _🧬 A lightweight JavaScript utility allowing deep copy-by-value of nested objects, arrays and arrays of objects. 🪁_
 
+<br>
+
 [@igor.dvlpr/odin](https://www.npmjs.com/package/@igor.dvlpr/odin)
 
 > _🔱 Odin is an Object wrapper that allows you to create objects and set their attributes - all at once! 🔺_
+
+<br>
 
 [@igor.dvlpr/str-is-in](https://www.npmjs.com/package/@igor.dvlpr/str-is-in)
 
@@ -173,7 +181,5 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 <br>
 <br>
-
->
-> Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
->
+ 
+Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
