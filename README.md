@@ -52,9 +52,9 @@ then add it to your HTML file:
 `index.html`
 ```html
 <script
-	src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
-	integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-	crossorigin="anonymous"
+  src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
+  integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+  crossorigin="anonymous"
 ></script>
 ```
 
@@ -75,18 +75,18 @@ Then import it into your project, e.g. an HTML page via the `<script>` tag:
 `index.html`
 ```html
 <script
-	src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"
-	integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-	crossorigin="anonymous"></script>
+  src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"
+  integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+  crossorigin="anonymous"></script>
 ```
 
 but if you don't like messing with that long path just copy the `"./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"` file to a directory of your liking and then update the reference to it, i.e.
 
 ```html
 <script
-	src="./js/scrollend.min.js"
-	integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-	crossorigin="anonymous"></script>
+  src="./js/scrollend.min.js"
+  integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+  crossorigin="anonymous"></script>
 ```
 
 <br>
