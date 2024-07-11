@@ -52,8 +52,8 @@ then add it to your HTML file:
 `index.html`
 ```html
 <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
-				integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-  			crossorigin="anonymous"></script>
+			integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+			crossorigin="anonymous"></script>
 ```
 
 <br>
