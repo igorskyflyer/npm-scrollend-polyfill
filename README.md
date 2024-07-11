@@ -112,8 +112,8 @@ The polyfilled `scrollend` Event can be added via `addEventListener()` or via th
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Scrollend polyfill</title>
 		<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
-			integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-			crossorigin="anonymous"></script>
+				integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+				crossorigin="anonymous"></script>
 		<style>
 			body {
 				height: 180vh;
