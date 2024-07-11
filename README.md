@@ -143,6 +143,12 @@ The polyfilled `scrollend` Event can be added via `addEventListener()` or via th
 
 ---
 
+## 📝 Changelog
+
+> ✨ Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/CHANGELOG.md).
+
+---
+
 ## 🪪 License
 
 Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/LICENSE).
@@ -179,7 +185,8 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 > _🧵 Provides ways of checking whether a String is present in an Array of Strings using custom Comparators. 🔍_
 
-<br>
+---
+
 <br>
  
 Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
