@@ -80,7 +80,7 @@ but if you don't like messing with that long path just copy the `"./node_modules
 
 ```html
 <script src="./js/scrollend.min.js"
-  integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="></script>
+		integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="></script>
 ```
 
 <br>
