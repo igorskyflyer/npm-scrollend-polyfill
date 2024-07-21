@@ -9,9 +9,6 @@
 <p align="right"><em>21-Jul-2024</em></p>
 
 - **💻 dev**: always used the tagged version for `jsDelivr`
-
-<br>
-
 - **📜 docs**: improve API documentation
 
 <br>
