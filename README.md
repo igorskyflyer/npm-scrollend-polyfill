@@ -9,18 +9,6 @@
 <br>
 <br>
 
-## 📃 Table of contents
-
-- [Usage](#-usage)
-- [API](#-api)
-    - [CDN](#cdn)
-    - [Install](#package-install)
-- [Examples](#-examples)
-- [Changelog](#-changelog)
-- [License](#-license)
-- [Related](#-related)
-- [Author](#-author)
-
 ---
 
 <div align="center">
@@ -44,6 +32,24 @@
   </blockquote>
 </div>
 
+<br>
+<br>
+
+## 📃 Table of contents
+
+- [Usage](#-usage)
+- [API](#-api)
+    - [CDN](#cdn)
+    - [Install](#package-install)
+- [Examples](#-examples)
+- [Changelog](#-changelog)
+- [License](#-license)
+- [Related](#-related)
+- [Author](#-author)
+
+---
+
+<br>
 <br>
 
 ## 🕵🏼 Usage
