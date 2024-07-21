@@ -1,7 +1,7 @@
 {
   "name": "@igor.dvlpr/scrollend-polyfill",
   "version": "1.2.0",
-  "description": "🛴 A performant and light (< 1KB) JavaScript polyfill for the scrollend Event. ⛸️",
+  "description": "🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️",
   "sideEffects": true,
   "browser": "./dist/scrollend.min.js",
   "files": ["dist/scrollend.min.js"],
