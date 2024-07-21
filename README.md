@@ -60,9 +60,15 @@ You can import the file via the CDN or by installing the package.
 
 ### CDN
 
+<br>
+
+<img src="https://data.jsdelivr.com/v1/package/gh/igorskyflyer/npm-scrollend-polyfill/badge" alt="jsDelivr stats">
+
+<br>
+
 The polyfill is hosted on jsDelivr and you can grab it from here:
 
-[https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js](https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js)
+[https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js](https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js)
 
 
 then add it to your HTML file:
@@ -71,12 +77,12 @@ then add it to your HTML file:
 
 `index.html`
 ```html
-<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
+<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js"
     integrity="sha256-3fG8VnL6PFA7RyDVnkG5bk03GMi6Xvy1tIKkSMKJ+Ds="
     crossorigin="anonymous"></script>
 ```
 
-<br>
+---
 
 ### Package install
 
@@ -116,9 +122,19 @@ but if you don't like messing with that long path just copy the `"./node_modules
 
 This polyfill adds the `scrollend` Event for the `window` and `document` objects.
 
+```js
+window.addEventListener('scrollend', myHandler)
+document.addEventListener('scrollend', myHandler)
+```
+
 <br>
 
 The polyfilled `scrollend` Event can be added via `addEventListener()` or via the property `onscrollend`.
+
+```js
+window.onscrollend = myHandler
+document.onscrollend = myHandler
+```
 
 ---
 
@@ -133,7 +149,7 @@ The polyfilled `scrollend` Event can be added via `addEventListener()` or via th
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrollend polyfill</title>
-    <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
+    <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js"
         integrity="sha256-3fG8VnL6PFA7RyDVnkG5bk03GMi6Xvy1tIKkSMKJ+Ds="
         crossorigin="anonymous"></script>
     <style>
