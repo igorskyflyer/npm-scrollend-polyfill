@@ -195,33 +195,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
+[@igor.dvlpr/magic-queryselector](https://www.npmjs.com/package/@igor.dvlpr/magic-queryselector)
+
+> _🪄 A TypeScript-types patch for querySelector/querySelectorAll, make them return types you expect them to! 🔮_
+
+<br>
+
+[@igor.dvlpr/aria](https://www.npmjs.com/package/@igor.dvlpr/aria)
+
+> _🧬 Meet Aria, an efficient Adblock filter list compiler, with many features that make your maintenance of Adblock filter lists a breeze! 🦖_
+
+<br>
+
 [@igor.dvlpr/windows-packages](https://www.npmjs.com/package/@igor.dvlpr/windows-packages)
 
-> _💻 A Node.js module for reading the Packages registry key on Windows 10. Useful for retrieving Windows 10 installed Store applications. 📦_
+> _💻 A Node.js module for reading the Packages registry key on Windows 10+. Useful for retrieving Windows 10+ installed Store applications. 📦_
 
 <br>
 
-[@igor.dvlpr/astro-post-excerpt](https://www.npmjs.com/package/@igor.dvlpr/astro-post-excerpt)
+[@igor.dvlpr/encode-entities](https://www.npmjs.com/package/@igor.dvlpr/encode-entities)
 
-> _⭐ An Astro component that renders post excerpts for your Astro blog - directly from your Markdown files. Astro v2 collections are supported as well! 💎_
-
-<br>
-
-[@igor.dvlpr/node-clone-js](https://www.npmjs.com/package/@igor.dvlpr/node-clone-js)
-
-> _🧬 A lightweight JavaScript utility allowing deep copy-by-value of nested objects, arrays and arrays of objects. 🪁_
+> _🏃‍♂️ Fast and simple Map and RegExp based HTML entities encoder. 🍁_
 
 <br>
 
-[@igor.dvlpr/odin](https://www.npmjs.com/package/@igor.dvlpr/odin)
+[@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
 
-> _🔱 Odin is an Object wrapper that allows you to create objects and set their attributes - all at once! 🔺_
-
-<br>
-
-[@igor.dvlpr/str-is-in](https://www.npmjs.com/package/@igor.dvlpr/str-is-in)
-
-> _🧵 Provides ways of checking whether a String is present in an Array of Strings using custom Comparators. 🔍_
+> _📚 An NPM package for fetching Windows registry keys. 🗝_
 
 ---
 
