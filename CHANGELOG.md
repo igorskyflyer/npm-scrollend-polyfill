@@ -4,6 +4,19 @@
 
 <br>
 
+## v1.2.1
+
+<p align="right"><em>21-Jul-2024</em></p>
+
+- **💻 dev**: always used the tagged version for `jsDelivr`
+
+<br>
+
+- **📜 docs**: import API documentation
+
+<br>
+<br>
+
 ## v1.2.0
 
 <p align="right"><em>21-Jul-2024</em></p>
