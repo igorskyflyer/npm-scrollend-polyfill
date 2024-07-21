@@ -1,33 +1,47 @@
-# ScrollEnd polyfill
+<h1 align="center">ScrollEnd polyfill</h1>
 
 <br>
 
 <p align="center">
-	🛴 A performant and light (&lt; 1KB) JavaScript polyfill for the scrollend Event. ⛸️
+  🛴 A performant and light (&lt; 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️
 </p>
 
 <br>
 <br>
 
+## 📃 Table of contents
+
+- [Usage](#-usage)
+- [API](#-api)
+    - [CDN](#cdn)
+    - [Install](#package-install)
+- [Examples](#-examples)
+- [Changelog](#-changelog)
+- [License](#-license)
+- [Related](#-related)
+- [Author](#-author)
+
+---
+
 <div align="center">
-	<blockquote>
-		<br>
-		<h4>💖 Support further development</h4>
-		<span>I work hard for every project, including this one and your support means a lot to me!
-		<br>
-		Consider buying me a coffee. ☕
-		<br>
-		<strong>Thank you for supporting my efforts! 🙏😊</strong></span>
-		<br>
-		<br>
-		<a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
-		<br>
-		<br>
-		<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
-		<br>
-		<br>
-		<br>
-	</blockquote>
+  <blockquote>
+    <br>
+    <h4>💖 Support further development</h4>
+    <span>I work hard for every project, including this one and your support means a lot to me!
+    <br>
+    Consider buying me a coffee. ☕
+    <br>
+    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
+    <br>
+    <br>
+    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
+    <br>
+    <br>
+    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
+    <br>
+    <br>
+    <br>
+  </blockquote>
 </div>
 
 <br>
@@ -38,7 +52,7 @@ You can import the file via the CDN or by installing the package.
 
 <br>
 
-#### CDN
+### CDN
 
 The polyfill is hosted on jsDelivr and you can grab it from here:
 
@@ -52,13 +66,13 @@ then add it to your HTML file:
 `index.html`
 ```html
 <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
-		integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-		crossorigin="anonymous"></script>
+    integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+    crossorigin="anonymous"></script>
 ```
 
 <br>
 
-#### Package install
+### Package install
 
 Install it by executing:
 
@@ -73,14 +87,14 @@ Then import it into your project, e.g. an HTML page via the `<script>` tag:
 `index.html`
 ```html
 <script src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"
-		integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="></script>
+    integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="></script>
 ```
 
 but if you don't like messing with that long path just copy the `"./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"` file to a directory of your liking and then update the reference to it, i.e.
 
 ```html
 <script src="./js/scrollend.min.js"
-		integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="></script>
+    integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="></script>
 ```
 
 <br>
@@ -98,44 +112,46 @@ This polyfill adds the `scrollend` Event for the `window` and `document` objects
 
 <br>
 
-The polyfilled `scrollend` Event can be added via `addEventListener()` or via the property `onscrollend`, e.g.
+The polyfilled `scrollend` Event can be added via `addEventListener()` or via the property `onscrollend`.
 
-<br>
+---
+
+## ✨ Examples
 
 `scroll-end.html`
 ```html
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Scrollend polyfill</title>
-		<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
-				integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
-				crossorigin="anonymous"></script>
-		<style>
-			body {
-				height: 180vh;
-			}
-		</style>
-	</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollend polyfill</title>
+    <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill/dist/scrollend.min.js"
+        integrity="sha256-6F/bdXudM1cUuqzzFwPFvSw14qQwWeWdhUs+7nG+Kgw="
+        crossorigin="anonymous"></script>
+    <style>
+      body {
+        height: 180vh;
+      }
+    </style>
+  </head>
 
-	<body>
-		<main>
-			<div>
-				<h1>Launch the DevTools and open the Console tab.</h1>
-				<h3>Then start scrolling.</h3>
-			</div>
-		</main>
-		<script>
-			function test() {
-				console.log('Scroll ended')
-			}
+  <body>
+    <main>
+      <div>
+        <h1>Launch the DevTools and open the Console tab.</h1>
+        <h3>Then start scrolling.</h3>
+      </div>
+    </main>
+    <script>
+      function test() {
+        console.log('Scroll ended')
+      }
 
-			document.addEventListener('scrollend', test)
-		</script>
-	</body>
+      document.addEventListener('scrollend', test)
+    </script>
+  </body>
 
 </html>
 
@@ -145,7 +161,7 @@ The polyfilled `scrollend` Event can be added via `addEventListener()` or via th
 
 ## 📝 Changelog
 
-> ✨ Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/CHANGELOG.md).
+✨ Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/CHANGELOG.md).
 
 ---
 
@@ -188,5 +204,6 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 ---
 
 <br>
- 
-Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
+
+### 👨🏻‍💻 Author
+Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
