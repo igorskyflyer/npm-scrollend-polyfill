@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Scrollend polyfill</title>
 		<link rel="stylesheet" type="text/css" href="eve.css">
-		<script src="../dist/scrollend.min.js"></script>
+		<script src="../dist/scrollend.js"></script>
 	</head>
 
 	<body>
@@ -44,7 +44,7 @@
 					message.className='end'
 				}
 
-				document.addEventListener('scrollend', handleScroll)
+				window.addEventListener('scrollend', handleScroll)
 
 				reset()
 			})
