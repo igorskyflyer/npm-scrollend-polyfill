@@ -1,13 +1,14 @@
 {
   "name": "@igor.dvlpr/scrollend-polyfill",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "🛴 A performant and light (< 1KB) JavaScript polyfill for the scrollend Event. ⛸️",
   "sideEffects": true,
   "browser": "./dist/scrollend.min.js",
-  "files": ["dist"],
+  "files": ["dist/scrollend.min.js"],
   "scripts": {
     "build": "esbuild src/index.mts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js",
-    "start": "npm run build && node ./test/server.mjs",
+    "debug": "esbuild src/index.mts --target=es6 --bundle --outfile=./dist/scrollend.js",
+    "start": "npm run debug && node ./test/server.mjs",
     "test": "npm run build && npm start",
     "pub": "npm run build && npm publish --access public"
   },
@@ -37,11 +38,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
-    "@types/node": "^20.14.10",
+    "@igor.dvlpr/common-types": "^1.2.0",
+    "@types/node": "^20.14.11",
     "esbuild": "^0.23.0",
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "@igor.dvlpr/hook": "^1.0.0"
+    "@igor.dvlpr/hook": "^1.1.0"
   }
 }
