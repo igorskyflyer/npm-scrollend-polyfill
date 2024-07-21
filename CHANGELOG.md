@@ -12,7 +12,7 @@
 
 <br>
 
-- **📜 docs**: import API documentation
+- **📜 docs**: improve API documentation
 
 <br>
 <br>
