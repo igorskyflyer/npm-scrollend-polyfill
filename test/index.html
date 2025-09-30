@@ -20,15 +20,24 @@
     <script>
       const message=document.querySelector('h1')
 
+      // reset the scroll position each load
+      window.onunload=function () {
+        window.scrollTo(0, 0)
+      }
+
       function reset() {
         message.textContent='Waiting for scroll...'
         message.className='waiting'
+
+        // remove then add the handler - for testing purposes
+        window.removeEventListener('scrollend', handleScroll)
+        window.addEventListener('scrollend', handleScroll)
       }
 
-      // reset the scroll position
-      // each load
-      window.onunload=function () {
-        window.scrollTo(0, 0)
+      function handleScroll(ev) {
+        message.textContent='Scrolling ended!'
+        message.className='end'
+        console.log(ev)
       }
 
       // prevents scroll events
@@ -38,14 +47,6 @@
           message.textContent='Scrolling...'
           message.className='scrolling'
         })
-
-        function handleScroll(ev) {
-          message.textContent='Scrolling ended!'
-          message.className='end'
-          console.log(ev)
-        }
-
-        window.addEventListener('scrollend', handleScroll)
 
         reset()
       })
