@@ -1,15 +1,14 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
-import type { Func } from '@igor.dvlpr/common-types'
-import { hook } from '@igor.dvlpr/hook'
+import { hook } from '@igorskyflyer/hook'
 
 if (typeof window === 'undefined') {
-  throw 'Not in a browser.'
+  throw new Error('Not in a browser.')
 }
 
 type Listener = {
   scrollFn: EventListener
-  handlers: Func[]
+  handlers: EventListenerOrEventListenerObject[]
 }
 
 const supported: boolean = 'onscrollend' in window
@@ -19,54 +18,56 @@ if (!supported) {
     EventTarget,
     Listener
   >()
-  let currentHandlerWindow: Func | null = null
-  let currentHandlerDocument: Func | null = null
+  let currentHandlerWindow: EventListenerOrEventListenerObject | null = null
+  let currentHandlerDocument: EventListenerOrEventListenerObject | null = null
 
   function addScrollEndHandler(
     this: EventTarget,
-    native: Func,
+    native: typeof EventTarget.prototype.addEventListener,
     eventName: string,
-    handler: Func
+    handler: EventListenerOrEventListenerObject
   ) {
     if (eventName !== 'scrollend') {
       native.apply(this, [eventName, handler])
       return
     }
 
-    const target: EventTarget = this
-    let listener: Listener | undefined = registered.get(target)
+    let listener: Listener | undefined = registered.get(this)
 
     if (!listener) {
       let timeout: NodeJS.Timeout | number
 
       listener = {
-        scrollFn: () => {
+        scrollFn: (ev) => {
           clearTimeout(timeout)
           timeout = setTimeout(() => {
-            handler()
+            if (typeof handler === 'function') {
+              handler(ev)
+            } else {
+              handler.handleEvent(ev)
+            }
           }, 100)
         },
         handlers: [handler]
       }
 
-      native.apply(target, ['scroll', listener.scrollFn, false])
-      registered.set(target, listener)
+      native.apply(this, ['scroll', listener.scrollFn, false])
+      registered.set(this, listener)
     }
   }
 
   function removeScrollEndHandler(
     this: EventTarget,
-    native: Func,
+    native: typeof EventTarget.prototype.removeEventListener,
     eventName: string,
-    handler: Func
+    handler: EventListenerOrEventListenerObject
   ): void {
     if (eventName !== 'scrollend') {
       native.apply(this, [eventName, handler])
       return
     }
 
-    const target: EventTarget = this
-    const listener: Listener | undefined = registered.get(target)
+    const listener: Listener | undefined = registered.get(this)
 
     if (!listener) {
       return
@@ -87,20 +88,20 @@ if (!supported) {
     }
 
     if (listener.handlers.length === 0) {
-      registered.delete(target)
+      registered.delete(this)
     }
   }
 
   hook(window, 'addEventListener', addScrollEndHandler, true)
   hook(window, 'removeEventListener', removeScrollEndHandler, true)
   Object.defineProperty(window, 'onscrollend', {
-    set: (handler) => {
-      if (typeof handler !== 'function' || currentHandlerWindow) {
+    set: (handler: EventListenerOrEventListenerObject | null) => {
+      if (currentHandlerWindow) {
         removeScrollEndHandler.call(
           window,
           window.removeEventListener,
           'scrollend',
-          currentHandlerWindow as Func
+          currentHandlerWindow
         )
       }
 
@@ -121,13 +122,13 @@ if (!supported) {
   hook(document, 'addEventListener', addScrollEndHandler, true)
   hook(document, 'removeEventListener', removeScrollEndHandler, true)
   Object.defineProperty(document, 'onscrollend', {
-    set: (handler) => {
-      if (typeof handler !== 'function' || currentHandlerDocument) {
+    set: (handler: EventListenerOrEventListenerObject | null) => {
+      if (currentHandlerDocument) {
         removeScrollEndHandler.call(
           document,
           document.removeEventListener,
           'scrollend',
-          currentHandlerDocument as Func
+          currentHandlerDocument
         )
       }
 
