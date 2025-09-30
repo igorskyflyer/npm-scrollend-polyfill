@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Scrollend polyfill</title>
-		<link rel="stylesheet" type="text/css" href="eve.css">
-		<script src="../dist/scrollend.js"></script>
-	</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollend polyfill</title>
+    <link rel="stylesheet" type="text/css" href="eve.css">
+    <script src="../dist/scrollend.js"></script>
+  </head>
 
-	<body>
-		<main>
-			<div>
-				<h1 class="waiting">Waiting for scroll...</h1>
-				<br>
-				<button onclick="reset()">Reset</button>
-			</div>
-		</main>
-		<script>
-			const message=document.querySelector('h1')
+  <body>
+    <main>
+      <div>
+        <h1 class="waiting">Waiting for scroll...</h1>
+        <br>
+        <button onclick="reset()">Reset</button>
+      </div>
+    </main>
+    <script>
+      const message=document.querySelector('h1')
 
-			function reset() {
-				message.textContent='Waiting for scroll...'
-				message.className='waiting'
-			}
+      function reset() {
+        message.textContent='Waiting for scroll...'
+        message.className='waiting'
+      }
 
-			// reset the scroll position
-			// each load
-			window.onunload=function () {
-				window.scrollTo(0, 0)
-			}
+      // reset the scroll position
+      // each load
+      window.onunload=function () {
+        window.scrollTo(0, 0)
+      }
 
-			// prevents scroll events
-			// being fired upon reload
-			window.addEventListener('load', () => {
-				document.addEventListener('scroll', () => {
-					message.textContent='Scrolling...'
-					message.className='scrolling'
-				})
+      // prevents scroll events
+      // being fired upon reload
+      window.addEventListener('load', () => {
+        document.addEventListener('scroll', () => {
+          message.textContent='Scrolling...'
+          message.className='scrolling'
+        })
 
-				function handleScroll() {
-					message.textContent='Scrolling ended!'
-					message.className='end'
-				}
+        function handleScroll(ev) {
+          message.textContent='Scrolling ended!'
+          message.className='end'
+          console.log(ev)
+        }
 
-				window.addEventListener('scrollend', handleScroll)
+        window.addEventListener('scrollend', handleScroll)
 
-				reset()
-			})
-		</script>
-	</body>
+        reset()
+      })
+    </script>
+  </body>
 
 </html>
