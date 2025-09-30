@@ -104,6 +104,8 @@ yarn add @igorskyflyer/scrollend-polyfill
 npm i @igorskyflyer/scrollend-polyfill
 ```
 
+<br>
+
 Then import it into your project, e.g. an HTML page via the `<script>` tag:
 
 <br>
