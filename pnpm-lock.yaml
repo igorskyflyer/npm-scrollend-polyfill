@@ -18,9 +18,6 @@ importers:
       '@igorskyflyer/biome-config':
         specifier: ^2.1.0
         version: 2.1.0(@biomejs/biome@2.2.4)
-      '@igorskyflyer/common-types':
-        specifier: ^1.4.0
-        version: 1.4.0
       '@types/node':
         specifier: ^22.18.7
         version: 22.18.7
@@ -250,10 +247,6 @@ packages:
     engines: {node: '>=22.0'}
     peerDependencies:
       '@biomejs/biome': ^2.2.2
-
-  '@igorskyflyer/common-types@1.4.0':
-    resolution: {integrity: sha512-MlBPtvKw4/3ju64NEtZ9NF/1A4VM5SJnib9RLu0t3n1x2SNBT78h+qnpfQMreXMX9c/q/ELmSRPphPj56L/3Vw==}
-    engines: {node: '>=22.0'}
 
   '@igorskyflyer/hook@1.2.0':
     resolution: {integrity: sha512-BbYeyV5TEZDvBDC/7++JvEWekvtiPyO+qQPZm8J4deyQO70VVfdFfNiH86fLA+f9QvyEKzRHuVig0SB/wuAPkg==}
@@ -743,8 +736,6 @@ snapshots:
   '@igorskyflyer/biome-config@2.1.0(@biomejs/biome@2.2.4)':
     dependencies:
       '@biomejs/biome': 2.2.4
-
-  '@igorskyflyer/common-types@1.4.0': {}
 
   '@igorskyflyer/hook@1.2.0': {}
 
