@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@igorskyflyer/hook':
-        specifier: ^1.2.0
-        version: 1.2.0
+        specifier: ^1.2.1
+        version: 1.2.1
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.2.4
@@ -248,8 +248,12 @@ packages:
     peerDependencies:
       '@biomejs/biome': ^2.2.2
 
-  '@igorskyflyer/hook@1.2.0':
-    resolution: {integrity: sha512-BbYeyV5TEZDvBDC/7++JvEWekvtiPyO+qQPZm8J4deyQO70VVfdFfNiH86fLA+f9QvyEKzRHuVig0SB/wuAPkg==}
+  '@igorskyflyer/common-types@1.4.0':
+    resolution: {integrity: sha512-MlBPtvKw4/3ju64NEtZ9NF/1A4VM5SJnib9RLu0t3n1x2SNBT78h+qnpfQMreXMX9c/q/ELmSRPphPj56L/3Vw==}
+    engines: {node: '>=22.0'}
+
+  '@igorskyflyer/hook@1.2.1':
+    resolution: {integrity: sha512-1wK2iSvDzbv5MD8dhBv6wP8wmyJ9mnP94TIutzjfqtkvHfj09NwIxG66zAKiRkOnWZzP4I5N9gXqNvMa3RGACQ==}
     engines: {node: '>=22.0'}
 
   '@jridgewell/sourcemap-codec@1.5.5':
@@ -737,7 +741,11 @@ snapshots:
     dependencies:
       '@biomejs/biome': 2.2.4
 
-  '@igorskyflyer/hook@1.2.0': {}
+  '@igorskyflyer/common-types@1.4.0': {}
+
+  '@igorskyflyer/hook@1.2.1':
+    dependencies:
+      '@igorskyflyer/common-types': 1.4.0
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
