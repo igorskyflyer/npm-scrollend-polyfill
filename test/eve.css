@@ -1,6 +1,7 @@
 body {
 	height: 180vh;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background: #333;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 main {
@@ -38,10 +39,10 @@ h1.end {
 }
 
 button {
-	padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 	border-radius: 4px;
-	background: #261198;
-	color: #FFF;
+	background: #155eac;
+	color: #fff;
 	font-weight: bold;
 	cursor: pointer;
 }
