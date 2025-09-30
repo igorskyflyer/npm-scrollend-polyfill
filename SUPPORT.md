@@ -1,6 +1,6 @@
 # 🛠️ Support
 
-Hello, thank you for using {{project}}! 🙋🏻‍♂️  
+Hello, thank you for using Scrollend Polyfill! 🙋🏻‍♂️  
 
 Whether you're exploring its features, troubleshooting, or suggesting improvements, let's make your experience as smooth as possible.
 
@@ -22,7 +22,7 @@ All of my projects are heavily tested but bugs can sneak through. If you do find
 - open a [`new issue`](https://github.com/igorskyflyer/npm-scrollend-polyfill/issues) using the appropriate issue template and with the label of `bug`,
 - include details such as:
    - steps to reproduce
-   - {{project}} version
+   - Scrollend Polyfill version
    - device and OS details,
 - screenshots, error message are super helpful and appreciated!
 
@@ -65,7 +65,7 @@ Need to reach me directly or share your feedback?
 
 <br>
 
-If you'd like to support further development of {{project}}:
+If you'd like to support further development of Scrollend Polyfill:
 - buy me a coffee at [Ko-Fi](https://ko-fi.com/igorskyflyer) ☕
 - star the repository ⭐
 - share the project with your colleagues, team or network 🌍
@@ -76,7 +76,7 @@ If you'd like to support further development of {{project}}:
 <br>
 
 <div align="center">
-  Thank you for using {{project}}!
+  Thank you for using Scrollend Polyfill!
   <br>
   <strong>Igor Dimitrijević</strong> (<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>)
 </div>
