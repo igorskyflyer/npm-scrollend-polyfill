@@ -1,5 +1,5 @@
 {
-    "include": ["src/**/*", "test/server.mjs"],
+    "include": ["src/**/*", "test/server.js"],
     "exclude": ["node_modules/**/*", "test/**/*", "dist/**/*"],
     "compilerOptions": {
         "target": "ES2023",
