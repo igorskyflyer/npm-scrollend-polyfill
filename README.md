@@ -130,13 +130,7 @@ This polyfill adds the `scrollend` Event for the `window` and `document` objects
 ```js
 window.addEventListener('scrollend', myHandler)
 document.addEventListener('scrollend', myHandler)
-```
 
-<br>
-
-The polyfilled `scrollend` Event can be added via `addEventListener()` or via the property `onscrollend`.
-
-```js
 window.onscrollend = myHandler
 document.onscrollend = myHandler
 ```
