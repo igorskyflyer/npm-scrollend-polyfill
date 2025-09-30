@@ -14,7 +14,7 @@
         "sri": "node ./sri.js",
         "build": "esbuild src/index.ts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js && pnpm sri",
         "debug": "esbuild src/index.ts --target=es6 --bundle --outfile=./dist/scrollend.js",
-        "start": "pnpm debug && node ./test/server.mjs",
+        "start": "pnpm debug && node ./test/server.js",
         "test": "pnpm build && npm start",
         "pub": "pnpm build && git push origin main --tags"
     },
