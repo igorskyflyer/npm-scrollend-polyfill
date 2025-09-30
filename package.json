@@ -11,7 +11,8 @@
         "dist/scrollend.min.js"
     ],
     "scripts": {
-        "build": "esbuild src/index.mts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js",
+        "sri": "node ./sri.js",
+        "build": "esbuild src/index.mts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js && pnpm sri",
         "debug": "esbuild src/index.mts --target=es6 --bundle --outfile=./dist/scrollend.js",
         "start": "pnpm debug && node ./test/server.mjs",
         "test": "pnpm build && npm start",
@@ -57,7 +58,7 @@
         "esbuild": "^0.25.10"
     },
     "dependencies": {
-        "@igorskyflyer/hook": "^1.2.0"
+        "@igorskyflyer/hook": "^1.2.1"
     },
     "publishConfig": {
         "access": "public"
