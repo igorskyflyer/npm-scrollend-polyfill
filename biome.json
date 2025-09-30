@@ -1,41 +1,4 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
-  "formatter": {
-    "formatWithErrors": false
-  },
-  "json": {
-    "formatter": {
-      "indentStyle": "space",
-      "indentWidth": 2
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "arrowParentheses": "always",
-      "bracketSameLine": true,
-      "bracketSpacing": true,
-      "indentStyle": "space",
-      "indentWidth": 2,
-      "quoteProperties": "asNeeded",
-      "quoteStyle": "single",
-      "semicolons": "asNeeded",
-      "trailingCommas": "none"
-    }
-  },
-  "linter": {
-    "rules": {
-      "style": {
-        "noInferrableTypes": "off"
-      },
-      "complexity": {
-        "noUselessThisAlias": "off"
-      },
-      "suspicious": {
-        "noExplicitAny": "off"
-      }
-    }
-  }
+    "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+    "extends": ["@igorskyflyer/biome-config"]
 }
