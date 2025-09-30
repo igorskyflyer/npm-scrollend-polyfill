@@ -1,49 +1,66 @@
 {
-  "name": "@igor.dvlpr/scrollend-polyfill",
-  "version": "1.2.1",
-  "description": "🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️",
-  "sideEffects": true,
-  "browser": "./dist/scrollend.min.js",
-  "files": ["dist/scrollend.min.js"],
-  "scripts": {
-    "build": "esbuild src/index.mts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js",
-    "debug": "esbuild src/index.mts --target=es6 --bundle --outfile=./dist/scrollend.js",
-    "start": "npm run debug && node ./test/server.mjs",
-    "test": "npm run build && npm start",
-    "pub": "npm run build && npm publish --access public"
-  },
-  "keywords": [
-    "scrollend",
-    "scroll-end",
-    "browser",
-    "scroll",
-    "event",
-    "polyfill",
-    "dom",
-    "document",
-    "interactivity",
-    "igorskyflyer",
-    "igor.dvlpr"
-  ],
-  "license": "MIT",
-  "author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
-  "funding": "https://ko-fi.com/igorskyflyer",
-  "homepage": "https://github.com/igorskyflyer/npm-scrollend-polyfill",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/igorskyflyer/npm-scrollend-polyfill.git"
-  },
-  "bugs": {
-    "url": "https://github.com/igorskyflyer/npm-scrollend-polyfill/issues"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@igor.dvlpr/common-types": "^1.2.0",
-    "@types/node": "^20.14.11",
-    "esbuild": "^0.23.0",
-    "typescript": "^5.5.3"
-  },
-  "dependencies": {
-    "@igor.dvlpr/hook": "^1.1.0"
-  }
+    "name": "@igorskyflyer/scrollend-polyfill",
+    "version": "1.3.0",
+    "description": "🛴 Lightweight (<1.5KB) scrollend polyfill for browsers, enabling onscrollend with add/removeEventListener hooks for fast, reliable scroll detection. ⛸️",
+    "sideEffects": true,
+    "type": "module",
+    "browser": "./dist/scrollend.min.js",
+    "main": "./dist/scrollend.min.js",
+    "module": "./dist/scrollend.min.js",
+    "files": [
+        "dist/scrollend.min.js"
+    ],
+    "scripts": {
+        "build": "esbuild src/index.mts --minify --target=es6 --bundle --outfile=./dist/scrollend.min.js",
+        "debug": "esbuild src/index.mts --target=es6 --bundle --outfile=./dist/scrollend.js",
+        "start": "pnpm debug && node ./test/server.mjs",
+        "test": "pnpm build && npm start",
+        "pub": "pnpm build && git push origin main --tags"
+    },
+    "keywords": [
+        "scrollend",
+        "scrollend polyfill",
+        "onscrollend",
+        "scroll event",
+        "scroll listener",
+        "scroll detection",
+        "scrollend event",
+        "event polyfill",
+        "browser polyfill",
+        "window scrollend",
+        "document scrollend",
+        "addEventListener",
+        "removeEventListener",
+        "smooth scrolling",
+        "javascript polyfill",
+        "dom",
+        "igor dimitrijević",
+        "igorskyflyer"
+    ],
+    "license": "MIT",
+    "author": "Igor Dimitrijević <support@igorskyflyer.me> (https://github.com/igorskyflyer)",
+    "funding": "https://ko-fi.com/igorskyflyer",
+    "homepage": "https://github.com/igorskyflyer/npm-scrollend-polyfill",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/igorskyflyer/npm-scrollend-polyfill.git"
+    },
+    "bugs": {
+        "url": "https://github.com/igorskyflyer/npm-scrollend-polyfill/issues"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.2.4",
+        "@igorskyflyer/biome-config": "^2.1.0",
+        "@types/node": "^22.18.7",
+        "typescript": "^5.9.2",
+        "vitest": "^3.2.4",
+        "esbuild": "^0.25.10"
+    },
+    "dependencies": {
+        "@igorskyflyer/hook": "^1.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.17.1"
 }
