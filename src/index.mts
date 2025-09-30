@@ -25,69 +25,69 @@ if (!supported) {
     this: EventTarget,
     native: typeof EventTarget.prototype.addEventListener,
     eventName: string,
-    handler: EventListenerOrEventListenerObject
+    handler: EventListenerOrEventListenerObject,
+    options?: boolean | AddEventListenerOptions
   ) {
     if (eventName !== 'scrollend') {
-      native.apply(this, [eventName, handler])
+      native.call(this, eventName, handler, options)
       return
     }
 
-    let listener: Listener | undefined = registered.get(this)
+    let listener = registered.get(this)
 
     if (!listener) {
-      let timeout: NodeJS.Timeout | number
+      let timeout: number | NodeJS.Timeout
 
       listener = {
-        scrollFn: (ev) => {
-          clearTimeout(timeout)
+        scrollFn: () => {
+          clearTimeout(timeout as number)
           timeout = setTimeout(() => {
-            if (typeof handler === 'function') {
-              handler(ev)
-            } else {
-              handler.handleEvent(ev)
-            }
+            const scrollEndEvent: Event = new Event('scrollend', {
+              bubbles: true
+            })
+
+            const target = this === window ? document : this
+
+            target.dispatchEvent(scrollEndEvent)
           }, 100)
         },
-        handlers: [handler]
+        handlers: []
       }
 
-      native.apply(this, ['scroll', listener.scrollFn, false])
+      native.call(this, 'scroll', listener.scrollFn, false)
       registered.set(this, listener)
     }
+
+    native.call(this, 'scrollend', handler)
+    listener.handlers.push(handler)
   }
 
   function removeScrollEndHandler(
     this: EventTarget,
     native: typeof EventTarget.prototype.removeEventListener,
     eventName: string,
-    handler: EventListenerOrEventListenerObject
+    handler: EventListenerOrEventListenerObject,
+    options?: boolean | EventListenerOptions
   ): void {
     if (eventName !== 'scrollend') {
-      native.apply(this, [eventName, handler])
+      native.call(this, eventName, handler, options)
       return
     }
 
-    const listener: Listener | undefined = registered.get(this)
-
+    const listener = registered.get(this)
     if (!listener) {
       return
     }
 
-    if (typeof listener.scrollFn === 'function') {
-      native.apply(this, ['scroll', listener.scrollFn])
-    }
+    native.call(this, 'scrollend', handler)
 
-    if (typeof handler === 'undefined') {
-      listener.handlers = []
-    } else {
-      const handlerIndex: number = listener.handlers.indexOf(handler)
-
-      if (handlerIndex > -1) {
-        listener.handlers.splice(handlerIndex, 1)
-      }
+    const idx = listener.handlers.indexOf(handler)
+    if (idx > -1) {
+      listener.handlers.splice(idx, 1)
     }
 
     if (listener.handlers.length === 0) {
+      native.call(this, 'scroll', listener.scrollFn)
       registered.delete(this)
     }
   }
