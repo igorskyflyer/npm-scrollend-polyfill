@@ -1,9 +1,10 @@
 import { readFileSync } from 'node:fs'
 import { createServer } from 'node:http'
 
-const hostname = '127.0.0.1'
-const port = 3000
+const HOSTNAME = '127.0.0.1'
+const PORT = 3000
 
+/** @type {{ [key: string]: { contentType: string; path: string } }} */
 const routes = {
   js: { contentType: 'application/javascript', path: '.' },
   css: { contentType: 'text/css', path: './test' }
@@ -12,7 +13,7 @@ const routes = {
 const server = createServer((req, res) => {
   let root = './test'
 
-  if (!req || !req.url || req.url.endsWith('ico')) {
+  if (!req?.url || req.url.endsWith('ico')) {
     res.statusCode = 404
     res.end()
   } else if (req.url === '/') {
@@ -34,6 +35,7 @@ const server = createServer((req, res) => {
   }
 })
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
+server.listen(PORT, HOSTNAME, () => {
+  // biome-ignore lint/suspicious/noConsole: Needed for logging
+  console.log(`Server running at http://${HOSTNAME}:${PORT}/`)
 })
