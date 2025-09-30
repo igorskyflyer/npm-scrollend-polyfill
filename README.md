@@ -1,60 +1,59 @@
-<h1 align="center">ScrollEnd polyfill</h1>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/npm-scrollend-polyfill/main/media/scrollend-polyfill.png" alt="Icon of Scrollend Polyfill" width="256" height="256">
+  <h1>Scrollend Polyfill</h1>
+</div>
+
+<blockquote align="center"> Spec-Faithful • Scrollend Event • Type-Safe • Cross-Browser </blockquote>
+
+<h4 align="center">
+  🛴 Lightweight (<strong>&lt; 1.5KB</strong>) scrollend polyfill for browsers, enabling 'scrollend' via add/removeEventListener and 'onscrollend' property for fast, reliable scroll detection. ⛸️
+</h4>
 
 <br>
-
-<p align="center">
-  🛴 A performant and light (&lt; 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️
-</p>
-
-<br>
-<br>
-
----
 
 <div align="center">
-  <blockquote>
-    <br>
-    <h4>💖 Support further development</h4>
-    <span>I work hard for every project, including this one and your support means a lot to me!
-    <br>
-    Consider buying me a coffee. ☕
-    <br>
-    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
-    <br>
-    <br>
-    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
-    <br>
-    <br>
-    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
-    <br>
-    <br>
-    <br>
-  </blockquote>
+  <img src="https://data.jsdelivr.com/v1/package/npm/@igorskyflyer/scrollend-polyfill/badge" alt="jsDelivr stats">
+  <img src="https://img.shields.io/npm/dt/@igorskyflyer/scrollend-polyfill?label=npm" alt="npm stats">
 </div>
 
 <br>
+
+## 📃 Table of Contents
+
+- [**Features**](#-features)
+- [**Usage**](#-usage)
+    - [**CDN**](#cdn)
+    - [**Local**](#local)
+- [**API**](#-api)
+- [**Examples**](#️-examples)
+- [**Changelog**](#-changelog)
+- [**Support**](#-support)
+- [**License**](#-license)
+- [**Related**](#-related)
+- [**Author**](#-author)
+
 <br>
 
-## 📃 Table of contents
+## 🤖 Features
 
-- [Usage](#-usage)
-- [API](#-api)
-    - [CDN](#cdn)
-    - [Install](#package-install)
-- [Examples](#-examples)
-- [Changelog](#-changelog)
-- [License](#-license)
-- [Related](#-related)
-- [Author](#-author)
+- ✨ Fires `scrollend` event reliably
+- 🌍 Works across browsers and devices
+- ⚡ Lightweight (< 1.5KB minified)
+- 🧩 Type-safe for strong typings
+- 🛡 Safe native-like behavior
+- 🎯 Supports `once` and `bubbling`
+- 🔧 Easy drop-in usage
+- 📦 Ready for production builds
+- 🔍 Debug-friendly and reversible
+- 🕹 Compatible with `window`, `document` and `onscrollend` property
 
----
-
-<br>
 <br>
 
 ## 🕵🏼 Usage
 
-You can import the file via the CDN or by installing the package.
+There are two ways of obtaining the polyfill:
+- via a CDN (*recommended*)
+- via a local file.
 
 <br>
 
@@ -62,14 +61,9 @@ You can import the file via the CDN or by installing the package.
 
 <br>
 
-<img src="https://data.jsdelivr.com/v1/package/gh/igorskyflyer/npm-scrollend-polyfill/badge" alt="jsDelivr stats">
-
-<br>
-
 The polyfill is hosted on jsDelivr and you can grab it from here:
 
-[https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js](https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js)
-
+[https://cdn.jsdelivr.net/npm/@igorskyflyer/scrollend-polyfill@1.3.0/dist/scrollend.min.js](https://cdn.jsdelivr.net/npm/@igorskyflyer/scrollend-polyfill@1.3.0/dist/scrollend.min.js)
 
 then add it to your HTML file:
 
@@ -77,19 +71,36 @@ then add it to your HTML file:
 
 `index.html`
 ```html
-<script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js"
-        integrity="sha256-3fG8VnL6PFA7RyDVnkG5bk03GMi6Xvy1tIKkSMKJ+Ds="
+<script src="https://cdn.jsdelivr.net/npm/@igorskyflyer/scrollend-polyfill@1.3.0/dist/scrollend.min.js"
+        integrity="sha256-P1Q7nRQI+8DpWPufXZGwsmwkY/uYGwA0TIFLO7m0kI4"
         crossorigin="anonymous"></script>
 ```
 
+<br>
+
+> ### ℹ️ NOTE
+>
+> #### CSP (Content Security Policy)
+>
+> If you use CSP (*which you really should)* you need to add the above SHA-256 hash to the allowed script sources.
+>
+
 ---
 
-### Package install
+### Local
 
-Install it by executing:
+Install it by executing any of the following, depending on your preferred package manager:
 
-```shell
-npm i "@igor.dvlpr/scrollend-polyfill"
+```bash
+pnpm add @igorskyflyer/scrollend-polyfill
+```
+
+```bash
+yarn add @igorskyflyer/scrollend-polyfill
+```
+
+```bash
+npm i @igorskyflyer/scrollend-polyfill
 ```
 
 Then import it into your project, e.g. an HTML page via the `<script>` tag:
@@ -98,29 +109,20 @@ Then import it into your project, e.g. an HTML page via the `<script>` tag:
 
 `index.html`
 ```html
-<script src="./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"
-        integrity="sha256-3fG8VnL6PFA7RyDVnkG5bk03GMi6Xvy1tIKkSMKJ+Ds="></script>
+<script src="./node_modules/@igorskyflyer/scrollend-polyfill/dist/scrollend.min.js"></script>
 ```
 
-but if you don't like messing with that long path just copy the `"./node_modules/@igor.dvlpr/scrollend-polyfill/dist/scrollend.min.js"` file to a directory of your liking and then update the reference to it, i.e.
+but if you don't like messing with that long path just copy the `"./node_modules/@igorskyflyer/scrollend-polyfill/dist/scrollend.min.js"` file to a directory of your liking and then update the reference to it, i.e.
 
 ```html
-<script src="./js/scrollend.min.js"
-        integrity="sha256-3fG8VnL6PFA7RyDVnkG5bk03GMi6Xvy1tIKkSMKJ+Ds="></script>
+<script src="./js/scrollend.min.js"></script>
 ```
-
-<br>
-<br>
-
-> [!NOTE]
-> If you use CSP (*which you really should)* you need to add the above SHA-256 hash to the allowed script sources.
->
 
 <br>
 
 ## 🤹🏼 API
 
-This polyfill adds the `scrollend` Event for the `window` and `document` objects.
+This polyfill adds the `scrollend` Event for the `window` and `document` objects and the `onscrollend` property.
 
 ```js
 window.addEventListener('scrollend', myHandler)
@@ -136,9 +138,9 @@ window.onscrollend = myHandler
 document.onscrollend = myHandler
 ```
 
----
+<br>
 
-## ✨ Examples
+## 🗒️ Examples
 
 `scroll-end.html`
 ```html
@@ -149,8 +151,8 @@ document.onscrollend = myHandler
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrollend polyfill</title>
-    <script src="https://cdn.jsdelivr.net/gh/igorskyflyer/npm-scrollend-polyfill@1.2.1/dist/scrollend.min.js"
-            integrity="sha256-3fG8VnL6PFA7RyDVnkG5bk03GMi6Xvy1tIKkSMKJ+Ds="
+    <script src="https://cdn.jsdelivr.net/npm/@igorskyflyer/scrollend-polyfill@1.3.0/dist/scrollend.min.js"
+            integrity="sha256-P1Q7nRQI+8DpWPufXZGwsmwkY/uYGwA0TIFLO7m0kI4"
             crossorigin="anonymous"></script>
     <style>
       body {
@@ -179,53 +181,67 @@ document.onscrollend = myHandler
 
 ```
 
----
+<br>
 
 ## 📝 Changelog
 
-✨ Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/CHANGELOG.md).
+📑 Read about the latest changes in the [**CHANGELOG**](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/CHANGELOG.md).
 
----
+<br>
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/LICENSE).
+Licensed under the [**MIT license**](https://github.com/igorskyflyer/npm-scrollend-polyfill/blob/main/LICENSE).
 
----
+<br>
+
+## 💖 Support
+
+<div align="center">
+  I work hard for every project, including this one and your support means a lot to me!
+  <br>
+  Consider buying me a coffee. ☕
+  <br>
+  <br>
+  <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="180" height="46"></a>
+  <br>
+  <br>
+  <em>Thank you for supporting my efforts!</em> 🙏😊
+</div>
+
+<br>
 
 ## 🧬 Related
 
-[@igor.dvlpr/magic-queryselector](https://www.npmjs.com/package/@igor.dvlpr/magic-queryselector)
+[**@igorskyflyer/adblock-filter-counter**](https://www.npmjs.com/package/@igorskyflyer/adblock-filter-counter)
 
-> _🪄 A TypeScript-types patch for querySelector/querySelectorAll, make them return types you expect them to! 🔮_
-
-<br>
-
-[@igor.dvlpr/aria](https://www.npmjs.com/package/@igor.dvlpr/aria)
-
-> _🧬 Meet Aria, an efficient Adblock filter list compiler, with many features that make your maintenance of Adblock filter lists a breeze! 🦖_
+> _🐲 A lightweight npm module for counting ad-block filter rules, ultra-simple, fast, and perfect for list maintainers, filter testers, and privacy tool developers.🦘_
 
 <br>
 
-[@igor.dvlpr/windows-packages](https://www.npmjs.com/package/@igor.dvlpr/windows-packages)
+[**@igorskyflyer/emojilyzer**](https://www.npmjs.com/package/@igorskyflyer/emojilyzer)
 
-> _💻 A Node.js module for reading the Packages registry key on Windows 10+. Useful for retrieving Windows 10+ installed Store applications. 📦_
-
-<br>
-
-[@igor.dvlpr/encode-entities](https://www.npmjs.com/package/@igor.dvlpr/encode-entities)
-
-> _🏃‍♂️ Fast and simple Map and RegExp based HTML entities encoder. 🍁_
+> _💬 Emojifies strings, converting textual representations of emojis to graphical ones. 🖌️_
 
 <br>
 
-[@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
+[**@igorskyflyer/mp3size**](https://www.npmjs.com/package/@igorskyflyer/mp3size)
 
-> _📚 An NPM package for fetching Windows registry keys. 🗝_
-
----
+> _🧮 Calculates an estimated file size of Mp3 files. 🎶_
 
 <br>
 
-### 👨🏻‍💻 Author
-Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
+[**@igorskyflyer/windev**](https://www.npmjs.com/package/@igorskyflyer/windev)
+
+> _🍃 Determines whether a path is a legacy Windows device. 💾_
+
+<br>
+
+[**@igorskyflyer/is-git-repo**](https://www.npmjs.com/package/@igorskyflyer/is-git-repo)
+
+> _🐸 Checks if a directory is a local Git repository. 🕶️_
+
+<br>
+
+## 👨🏻‍💻 Author
+Created by **Igor Dimitrijević ([*@igorskyflyer*](https://github.com/igorskyflyer/))**.
