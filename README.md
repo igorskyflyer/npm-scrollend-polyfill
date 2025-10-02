@@ -13,7 +13,7 @@
 <br>
 
 <div align="center">
-  <img src="https://data.jsdelivr.com/v1/package/npm/@igorskyflyer/scrollend-polyfill/badge" alt="jsDelivr stats">
+  <img src="https://data.jsdelivr.com/v1/package/gh/igorskyflyer/npm-scrollend-polyfill/badge" alt="jsDelivr stats">
   <img src="https://img.shields.io/npm/dt/@igorskyflyer/scrollend-polyfill?label=npm" alt="npm stats">
 </div>
 
