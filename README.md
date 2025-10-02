@@ -14,7 +14,7 @@
 
 <div align="center">
   <img src="https://data.jsdelivr.com/v1/package/gh/igorskyflyer/npm-scrollend-polyfill/badge" alt="jsDelivr stats">
-  <img src="https://img.shields.io/npm/dt/@igorskyflyer/scrollend-polyfill?label=npm" alt="npm stats">
+  <img src="https://img.shields.io/npm/dt/@igorskyflyer/scrollend-polyfill?label=npm&color=990000" alt="npm stats">
 </div>
 
 <br>
